@@ -12,5 +12,24 @@ db.once('open', function () {
     console.log('____________________________')
 });
 
+let signUpSchema = {
+    name: String,
+    email: String,
+    password: String,
+    mobile: Number,
+};
 
-module.exports = {}
+let postsSchema = {
+    img: String,
+    category: String,
+    state: Number,
+    description: String
+
+};
+
+
+
+let signUp = mongoose.model("signUp", signUpSchema);
+let posts = mongoose.model("posts", postsSchema);
+
+module.exports = { signUp, posts, }
