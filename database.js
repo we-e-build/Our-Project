@@ -12,6 +12,9 @@ db.once('open', function () {
     console.log('____________________________')
 });
 
+
+
+
 let signUpSchema = {
     name: String,
     email: String,
@@ -22,7 +25,7 @@ let signUpSchema = {
 let postsSchema = {
     img: String,
     category: String,
-    state: Number,
+    state: String,
     description: String
 
 };
